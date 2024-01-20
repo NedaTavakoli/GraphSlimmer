@@ -25,6 +25,8 @@ FA=Homo_sapiens.GRCh37.dna.chromosome.22.fa
 cd /storage/hive/project/cse-aluru/ntavakoli6/hged/
 
 $bcftools query -i '(TYPE="snp" || TYPE="indel") && GT="alt"' -f '%POS\t%TYPE\n' $VCF  > pos_type_snps_indels_variant_positions_${CHRID}.txt
+awk '{count[$2]++} END {print "SNP Count:", count["SNP"], "(", (count["SNP"]/NR)*100, "%)"; print "INDEL Count:", count["INDEL"], "(", (count["INDEL"]/NR)*100, "%)"}' pos_type_snps_indels_variant_positions_${CHRID}.txt
+
 
 CHRID=chr22
 alpha=150
@@ -46,23 +48,27 @@ awk '{count[$2]++} END {print "SNP Count:", count["SNP"], "(", (count["SNP"]/NR)
  ##################################################################################################################################################################
 
 Output:
-alpha, delta, SNP%, INDEL%
+
+Totoal: Total numner of variannts in chr22: 1098701, SNP Count: 1056333 ( 96.1438 %), INDEL Count: 42368 ( 3.85619 %)
+alpha, delta, reed SNP%, INDEL%
 ------------------------------
-75, 1,  SNP Count: 953586 ( 98.554 %), INDEL Count: 13991 ( 1.44598 %)
-100, 1, SNP Count: 941270 ( 98.628 %), INDEL Count: 13094 ( 1.37201 %)
-150, 1 , SNP Count: 923292 ( 98.7184 %), INDEL Count: 11987 ( 1.28165 %)
-150, 2, SNP Count: 1017688 ( 97.9487 %), INDEL Count: 21313 ( 2.0513 %)
-1000, 1, SNP Count: 461500 ( 98.9681 %), INDEL Count: 4812 ( 1.03193 %)
+75, 1,  SNP Count: 953586 ( 98.554 %), INDEL Count: 13991 ( 1.44598 %), total_retained: 1098701 - (953586 + 13991) = 133124 ( 12.144 %), removed: 1098701 - 133124 = 965577 ( 87.856 %)
+100, 1, SNP Count: 941270 ( 98.628 %), INDEL Count: 13094 ( 1.37201 %), total_retained: 1098701 - (941270 + 13094) = 146337 ( 13.322 %), removed: 1098701 - 146337 = 952364 ( 86.678 %)
+150, 1 , SNP Count: 923292 ( 98.7184 %), INDEL Count: 11987 ( 1.28165 %), total_retained: 1098701 - (923292 + 11987) = 155422 ( 14.146 %), removed: 1098701 - 155422 = 943279 ( 85.854 %)
+150, 2, SNP Count: 1017688 ( 97.9487 %), INDEL Count: 21313 ( 2.0513 %), total_retained: 1098701 - (1017688 + 21313) =  529700 ( 48.183 %, removed: 1098701 - 529700 = 568001 ( 51.817 %)  
+1000, 1, SNP Count: 461500 ( 98.9681 %), INDEL Count: 4812 ( 1.03193 %), total_retained: 1098701 - (461500 + 4812) =  636389 ( 57.905 %), removed: 1098701 - 636389 = 462312 ( 42.095 %)
 
 
 
 
 
+Report graph sizes: # edges and #nodes
 
 
 
-
-
+Report mapping accuracy for 100, 1:  Complete_mapping_accuracy: %, reduced_mapping_accuracy: %
+Report mapping accuracy for 25, 1:   Complete_mapping_accuracy: %, reduced_mapping_accuracy: %
+Report mapping accuracy for 1000, 1: Complete_mapping_accuracy: 80.89%, reduced_mapping_accuracy: 79.66%
 
 
 
