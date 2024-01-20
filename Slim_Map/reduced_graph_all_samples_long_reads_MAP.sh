@@ -20,7 +20,7 @@
 # bgzip=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/htslib-1.12/bgzip
 # tabix=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/htslib-1.12/tabix
 # GraphAligner=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/GraphAligner/bin/GraphAligner
-# k8=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/k8/k8-linux
+k8=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/k8/k8-linux
 
 
 ###################################################################################################
