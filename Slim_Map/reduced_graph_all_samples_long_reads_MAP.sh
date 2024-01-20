@@ -5,21 +5,21 @@
 # salloc -A hive-saluru8 -phive-himem -N1 --ntasks-per-node=1 --mem-per-cpu=3000G -t120:00:00
 
 
-# project_dir=/storage/hive/project/cse-aluru/ntavakoli6/hged
-# scratch=/storage/hive/scratch/6/ntavakoli6  
+project_dir=/storage/hive/project/cse-aluru/ntavakoli6/hged
+scratch=/storage/hive/scratch/6/ntavakoli6  
 
-# cd /storage/hive/project/cse-aluru/ntavakoli6/hged
-# module load gurobi
-# module load anaconda3
-# module load boost
-# module load cmake
+cd /storage/hive/project/cse-aluru/ntavakoli6/hged
+module load gurobi
+module load anaconda3
+module load boost
+module load cmake
 
 
-# samtools=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/samtools-1.12/samtools
-# bcftools=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/bcftools-1.9/bcftools
-# bgzip=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/htslib-1.12/bgzip
-# tabix=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/htslib-1.12/tabix
-# GraphAligner=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/GraphAligner/bin/GraphAligner
+samtools=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/samtools-1.12/samtools
+bcftools=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/bcftools-1.9/bcftools
+bgzip=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/htslib-1.12/bgzip
+tabix=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/htslib-1.12/tabix
+GraphAligner=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/GraphAligner/bin/GraphAligner
 k8=/storage/hive/project/cse-aluru/ntavakoli6/hged/software/k8/k8-linux
 
 
